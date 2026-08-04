@@ -356,6 +356,11 @@ set(EXTCPPSRC
 	external/fpv_detect/main.cpp
 	external/fpv_detect/ui_fpv_detect.cpp
 
+	#fpv_rx
+	external/fpv_rx/main.cpp
+	external/fpv_rx/fpv_rx_app.cpp
+	external/fpv_rx/ui_fpv_tv.cpp
+
 	#p25_tx
 	external/p25_tx/main.cpp
 	external/p25_tx/ui_p25_tx.cpp
@@ -455,6 +460,7 @@ set(EXTAPPLIST
 	waterfall_designer
 	detector_rx
 	fpv_detect
+	fpv_rx
 	spaceinv
 	blackjack
 	battleship

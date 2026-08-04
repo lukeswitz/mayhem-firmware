@@ -115,6 +115,7 @@ MEMORY
     ram_external_app_vor_tx                (rwx) : org = 0xAE0A0000, len = 32k
     ram_external_app_signal_hunter         (rwx) : org = 0xAE0B0000, len = 32k
     ram_external_app_tetra_rx              (rwx) : org = 0xAE0C0000, len = 32k
+    ram_external_app_fpv_rx             (rwx) : org = 0xAE0D0000, len = 32k
 }
 
 SECTIONS
@@ -622,6 +623,12 @@ SECTIONS
         KEEP(*(.external_app.app_fpv_detect.application_information));
         */external/fpv_detect/*(*ui*external_app*fpv_detect*);
     } > ram_external_app_fpv_detect
+
+    .external_app_fpv_rx : ALIGN(4) SUBALIGN(4)
+    {
+        KEEP(*(.external_app.app_fpv_rx.application_information));
+        */external/fpv_rx/*(*ui*external_app*fpv_rx*);
+    } > ram_external_app_fpv_rx
 
     .external_app_p25_tx : ALIGN(4) SUBALIGN(4)
     {

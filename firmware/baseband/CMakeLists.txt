@@ -596,6 +596,13 @@ set(MODE_CPPSRC
 )
 DeclareTargets(PAMT am_tv)
 
+### FPV-RX
+
+set(MODE_CPPSRC
+	proc_fpv_rx.cpp
+)
+DeclareTargets(PFPV fpv_rx)
+
 ### GPS Simulator
 
 set(MODE_CPPSRC
